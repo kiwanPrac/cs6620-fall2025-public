@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # copy all application files to container
 COPY . .
 
-# use 3000 port
-EXPOSE 3000
+# use 5000 port
+EXPOSE 5000
 
 # run the flask application
 CMD ["python", "app.py"]
