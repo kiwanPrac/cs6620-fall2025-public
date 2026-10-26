@@ -57,6 +57,6 @@ jobs:
             --instance-ids "$INSTANCE_ID" \
             --comment "automated Docket Delopyment from GitHub Actions" \
             --document-name "AWS-RunShellScript" \
-            --parameters "{\"commands\":[\"docker pull $DOCKERHUB_USERNAME/cs6620-app:latest\",\"docker rm -f cs6620-app || true\",\"docker run -d --restart unless-stopped -p 80:5000 --name cs6620-app $DOCKERHUB_USERNAME/cs6620-app:latest\"]}" \
+            --parameters "{\"commands\":[\"docker pull $DOCKERHUB_USERNAME/cs6620-app:latest\",\"docker rm -f cs6620-app || true\",\"docker run -d --restart unless-stopped -p 80:3000 --name cs6620-app $DOCKERHUB_USERNAME/cs6620-app:latest\"]}" \
             --region "${{ secrets.AWS_REGION }}"
             
